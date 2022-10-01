@@ -1,0 +1,10 @@
+.jag-background {
+    background-image: url("https://cdn.shopify.com/s/files/1/0274/1351/2301/files/SFW_BJagsPS2.png?v=1662647817");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+    background-size: contain;
+}
