@@ -1,14 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const Hero = () => {
+
+    const router = useRouter();
+
   return (
     <div className=''>
         <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="hidden md:block relative h-[35rem] mx-auto w-[100%] md:h-[30rem] border-r-2 border-black ">
                 <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-20.png?v=1663954587' layout='fill' objectFit='cover' />
             </div>
-            <div className="relative h-[35rem] w-[90%] mx-auto md:w-[100%] md:h-[30rem] ">
+            <div className="relative h-[30rem] w-[90%] mx-auto md:w-[100%] md:h-[30rem] ">
                 <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-21.png?v=1663954486' layout='fill' objectFit='cover' />
             </div>
             <div className="hidden md:block relative h-[35rem] mx-auto w-[100%] md:h-[30rem] border-l-2 border-black ">
@@ -23,7 +27,7 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center justify-start pl-5 mt-8 md:max-w-2xl md:mx-auto">
-                <button className="border-[1px] shadow-lg border-black rounded-3xl bg-gray-300 font-semibold px-4 py-2 md:text-lg ">Availble Now</button>
+                <button onClick={() => router.push('/products/fossil-x-jaguar-runner')} className="border-[1px] shadow-lg border-black rounded-3xl bg-gray-300 font-semibold px-4 py-2 md:text-lg ">Availble Now</button>
             </div>
 
         </section>

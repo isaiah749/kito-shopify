@@ -5,10 +5,17 @@ import { getProductsInCollection } from '../lib/shopify'
 import ProductList from '../components/ProductList'
 import HeroVideo from '../components/HeroVideo'
 import Hero from '../components/Hero'
+import { useRouter } from 'next/router'
 import HomeForm from '../components/Forms/HomeForm'
+import SubHero from '../components/subComponents/SubHero'
+import SubHeroTwo from '../components/subComponents/SubHero2'
 
 
 export default function Home({ products }) {
+
+  const router = useRouter();
+
+
   console.log(products)
   return (
     <main className="">
@@ -17,24 +24,16 @@ export default function Home({ products }) {
         <Hero />
       </section>
 
-
       <section className="h-[max-content] pt-5 pb-5 ">
-        <h2 className="mb-3 pl-5 text-xl font-semibold text-gray-400 opacity-70 md:text-2xl md:mb-5 md:opacity-60 ">Coming soon...</h2>
-        <HeroVideo />
-        <div className="px-5">
-          <h2 className="font-bold text-3xl mt-2 md:mt-4">KITOWARES</h2>
-          <h2 className="font-bold text-3xl -mt-2 mb-3">Creation & Destruction</h2>
-          <p className="pl-2 text-sm md:max-w-2xl md:mx-auto md:text-[1.05rem] ">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, quis eius, ipsam consequatur cumque tempore illum sunt a deleniti laudantium, dolores delectus eveniet quam alias temporibus. Odit, nesciunt. Veniam, explicabo.
-          </p>
-          <div className="flex items-center justify-start pl-2 mt-5 md:max-w-2xl md:mx-auto">
-                <button className="border-[1px] shadow-lg border-black rounded-3xl bg-gray-300 font-semibold px-4 py-2 md:text-lg ">Learn more</button>
-            </div>
+        <h2 className="mb-3 pl-5 text-xl font-semibold text-gray-400 opacity-70 md:text-2xl md:mb-5 md:opacity-60 ">What&apos;s Next...</h2>
+        <div className="flex items-center overflow-x-scroll snap-x snap-mandatory py-5 md:py-10 ">
+          <HeroVideo />
+          <SubHero />
+          <SubHeroTwo />
         </div>
       </section>
-      <section className="bg-black h-[100vh] pt-5">
+      <section className="bg-black h-[max-content] p-5">
         <h2 className="text-white font-bold text-center text-3xl ">Don't Miss Out</h2>
-        <h3 className="text-white font-semibold text-center text-xl mt-3">Stay Connected</h3>
         <div className="text-white">
           <HomeForm />
         </div>

@@ -1,15 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 
-const HeroVideo = () => {
+const SubHero = () => {
   return (
     <div className="w-screen snap-center flex-shrink-0">
       <div className="w-full md:w-[350px] h-[32rem] mx-auto ">
-          <video src='https://cdn.shopify.com/videos/c/o/v/14168d9d548a46409abfa2f867cba4db.mp4' className='w-full object-cover h-full' autoPlay loop muted />
+          <img src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/coveringsRich_edit5.jpg?v=1665416064' className='w-full object-cover h-full' autoPlay loop muted />
       </div>
       <div className="px-5">
-          <h2 className="font-bold text-3xl mt-2 md:mt-4">KITOWARES</h2>
-          <h2 className="font-bold text-2xl pl-4 -mt-2 mb-3">Creation & Destruction</h2>
+          <h2 className="font-bold text-3xl mt-2 md:mt-4">Fossil-X Collection</h2>
+          <h2 className="font-bold text-2xl pl-4 -mt-2 mb-3">Eye Coverings</h2>
           <p className="pl-2 text-sm md:max-w-2xl md:mx-auto md:text-[1.05rem] ">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, quis eius, ipsam consequatur cumque tempore illum sunt a deleniti laudantium, dolores delectus eveniet quam alias temporibus. Odit, nesciunt. Veniam, explicabo.
           </p>
@@ -21,4 +20,4 @@ const HeroVideo = () => {
   )
 }
 
-export default HeroVideo
+export default SubHero
