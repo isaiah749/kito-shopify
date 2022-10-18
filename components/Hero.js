@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center justify-start pl-5 mt-8 md:max-w-2xl md:mx-auto">
-                <button onClick={() => router.push('/products/fossil-x-jaguar-runner')} className="border-[1px] shadow-lg border-black rounded-3xl bg-gray-300 font-semibold px-4 py-2 md:text-lg ">Availble Now</button>
+                <button onClick={() => router.push('/products/fossil-x-jag-boot')} className="border-[1px] shadow-lg border-black rounded-3xl bg-gray-300 font-semibold px-4 py-2 md:text-lg ">Availble Now</button>
             </div>
 
         </section>
