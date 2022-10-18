@@ -4,7 +4,7 @@ import { getAllProducts, getProduct } from "../../lib/shopify"
 
 export default function ProductPage ({ product }) {
     return (
-        <div className="min-h-screen py-12 sm:pt-20 lg:max-w-4xl border-2 border-red-500 mx-auto ">
+        <div className="min-h-screen py-12 sm:pt-20 lg:max-w-4xl mx-auto ">
             <ProductPageContent product={product} />
         </div>
     )

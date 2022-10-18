@@ -4,7 +4,7 @@ import Image from 'next/image'
 const HeroVideo = () => {
   return (
     <div className="w-screen snap-center flex-shrink-0">
-      <div className="w-full md:w-[350px] h-[32rem] mx-auto ">
+      <div className="w-full md:w-[350px] h-[25rem] mx-auto ">
           <video src='https://cdn.shopify.com/videos/c/o/v/14168d9d548a46409abfa2f867cba4db.mp4' className='w-full object-cover h-full' autoPlay loop muted />
       </div>
       <div className="px-5">

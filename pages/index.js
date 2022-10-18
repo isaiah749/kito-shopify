@@ -18,7 +18,7 @@ export default function Home({ products }) {
 
   console.log(products)
   return (
-    <main className="">
+    <main className=" ">
 
       <section className="h-[max-content] pt-5 pb-5 ">
         <Hero />
@@ -27,9 +27,9 @@ export default function Home({ products }) {
       <section className="h-[max-content] pt-5 pb-5 ">
         <h2 className="mb-3 pl-5 text-xl font-semibold text-gray-400 opacity-70 md:text-2xl md:mb-5 md:opacity-60 ">What&apos;s Next...</h2>
         <div className="flex items-center overflow-x-scroll snap-x snap-mandatory py-5 md:py-10 ">
-          <HeroVideo />
           <SubHero />
           <SubHeroTwo />
+          <HeroVideo />
         </div>
       </section>
       <section className="bg-black h-[max-content] p-5">

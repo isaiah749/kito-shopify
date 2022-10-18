@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .nav-list-link {
+        @apply text-center text-lg font-semibold border-b border-black
+    }
+}

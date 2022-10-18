@@ -3,7 +3,7 @@ import React from 'react'
 const SubHero = () => {
   return (
     <div className="w-screen snap-center flex-shrink-0">
-      <div className="w-full md:w-[350px] h-[32rem] mx-auto ">
+      <div className="w-full md:w-[350px] h-[25rem] mx-auto ">
           <img src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/coveringsRich_edit5.jpg?v=1665416064' className='w-full object-cover h-full' autoPlay loop muted />
       </div>
       <div className="px-5">

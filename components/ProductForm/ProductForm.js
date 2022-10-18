@@ -1,9 +1,10 @@
 import { useState, useContext } from "react"
+import { formatter } from '../../utils/helpers'
+import ProductOptions from "../ProductOptions"
 
 
 const ProductForm = ({ product }) => {
 
-    
 
     const allVariantOptions = product.variants.edges?.map(variant => {
         const allOptions = {}
@@ -23,6 +24,13 @@ const ProductForm = ({ product }) => {
     })
     const defaultValues = {}
 
+    function setOptions(name, value) {
+        setSelectedOptions(prevState => {
+            return {...prevState, [name]: value}
+        })
+    }
+
+
     product.options.map(item => {
         defaultValues[item.name] = item.values[0]
     })
@@ -35,7 +43,18 @@ const ProductForm = ({ product }) => {
 
   return (
     <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 ">
-        <h2 className="text-3xl font-bold">{product.title}</h2>
+        <h2 className="text-xl font-bold">{product.title}</h2>
+        <span className="pb-6">{formatter.format(product.variants.edges[0].node.priceV2.amount)}</span>
+        {product.options.map(({ name, values }) => (
+            <ProductOptions 
+            key={`${name}`}
+            name={name}
+            values={values}
+            selectedOptions={selectedOptions}
+            setOptions={setOptions}
+            />
+        ))}
+        <button className="bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800 ">Add to cart</button>
     </div>
   )
 }
