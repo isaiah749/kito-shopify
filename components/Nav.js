@@ -25,25 +25,25 @@ const Nav = () => {
     <div className="relative">
       <div className="max-w-7xl flex items-center justify-center space-x-20 shadow-lg py-3">
           <div className="">
-            <div onClick={() => setOpen(!open)} className={open ? 'hidden' : 'block h-8 w-8 relative'}>
+            <div onClick={() => setOpen(!open)} className={open ? 'hidden' : 'block h-8 w-8 relative cursor-pointer'}>
               <Image src={menuIcon} layout='fill'  objectFit='cover' />
             </div>
-            <div onClick={() => setOpen(!open)} className={open ? 'block h-8 w-8 relative' : 'hidden'}>
+            <div onClick={() => setOpen(!open)} className={open ? 'block h-8 w-8 relative cursor-pointer' : 'hidden'}>
               <Image src={closeIcon} layout='fill'  objectFit='cover' />
             </div>
           </div>
           <div onClick={() => router.push('/')} className="relative h-[50px] w-[120px]">
           <Image src={kitoLogo} layout='fill'  objectFit='contain' />
           </div>
-          <div className="relative h-10 w-10">
-            <Image onClick={() => setCartOpen(!cartOpen)} src={bagIcon} layout='fill'  objectFit='cover' />
+          <div onClick={() => setCartOpen(!cartOpen)} className="relative h-10 w-10">
+            <Image  src={bagIcon} layout='fill'  objectFit='cover' />
             <div className="absolute top-3 font-bold left-4 ">
               {cartQuanity}
             </div>
           </div>
           <MiniCart cart={cart} />
       </div>
-      <div className={open ? "fixed w-full top-15 left-0 bg-white h-[max-content] z-20 transition-all ease-in-out duration-200 pt-5 " : "hidden"}>
+      <div className={open ? "absolute w-full top-15 left-0 bg-white h-[max-content] z-20 transition-all ease-in-out duration-200 pt-5 " : "hidden"}>
         <ul className='space-y-3 px-5'>
           <li onClick={() => router.push('/')} className='nav-list-link'>Home</li>
           <li onClick={() => router.push('/catelog')}  className='nav-list-link'>Catalog</li>

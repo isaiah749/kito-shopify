@@ -19,7 +19,8 @@ const ProductForm = ({ product }) => {
             price: variant.node.priceV2.amount,
             variantTitle: variant.node.title,
             options: allOptions,
-            variantQuantity: 1
+            variantQuantity: 1,
+            image: variant.node.image?.url
         }
        
         
