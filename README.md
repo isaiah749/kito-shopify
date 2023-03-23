@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This project in pulling data from a Shopify account that no longer exists.
+This project can't be deployed to the web because I do not have access to the store anymore and the products are being pulled from a collection that no longer exists.
 
 ## Getting Started
 
